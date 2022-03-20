@@ -28,7 +28,7 @@ jobs:
       run: dotnet build --no-restore ./src/HelloWorld/HelloWorld.csproj --configuration Release
 
     - name: Publish
-      run: dotnet publish -c Release -o ./src/HelloWorld/HelloWorld.csproj
+      run: dotnet publish ./src/HelloWorld/HelloWorld.csproj -c Release -o ${{env.DOTNET_ROOT}}/DemoApp
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
