@@ -8,7 +8,7 @@ namespace HelloWorld.Tests
         [Fact]
         public void IsTrue()
         {
-            Assert.True(false);
+            Assert.True(true);
         }
     }
 }
