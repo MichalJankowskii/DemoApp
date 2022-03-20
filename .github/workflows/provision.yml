@@ -28,8 +28,8 @@ jobs:
     - name: Run ARM deploy
       uses: azure/arm-deploy@v1
       with:
-        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-        resourceGroupName: ${{ secrets.AZURE_RG }}
+        subscriptionId: 730a05df-0d55-496b-8a6f-d65e0dc4448e
+        resourceGroupName: DemoApp
         template: ./src/Provisioning/template.json
         parameters: ./src/Provisioning/parameters.json
 
