@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - '/src/Provisioning/**'
+      - 'src/Provisioning/**'
 
 jobs:
   # This workflow contains a single job called "build"
