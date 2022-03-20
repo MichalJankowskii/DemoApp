@@ -6,7 +6,7 @@
             "value": "730a05df-0d55-496b-8a6f-d65e0dc4448e"
         },
         "name": {
-            "value": "devopsmjtest"
+            "value": "demoAppMJ12345"
         },
         "location": {
             "value": "West Europe"
@@ -18,7 +18,7 @@
             "value": "DevOpsDemoPlan"
         },
         "serverFarmResourceGroup": {
-            "value": "DevOps_Example"
+            "value": "DemoApp"
         },
         "alwaysOn": {
             "value": false
