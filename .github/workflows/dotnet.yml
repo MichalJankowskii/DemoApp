@@ -70,7 +70,7 @@ jobs:
           uses: azure/webapps-deploy@v2
           with:
             app-name: demoAppMJ12345
-            package: DemoApp
+            package: .
 
         - name: az cli logout
           run: az logout
