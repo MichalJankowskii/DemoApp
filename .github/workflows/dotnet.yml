@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore ./src/HelloWorld/HelloWorld.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./src/HelloWorld.Tests/HelloWorld.Tests.csproj
+      run: dotnet test --verbosity normal ./src/HelloWorld.Tests/HelloWorld.Tests.csproj
