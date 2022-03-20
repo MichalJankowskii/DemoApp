@@ -21,5 +21,9 @@ jobs:
       run: dotnet restore ./src/HelloWorld/HelloWorld.csproj
     - name: Build
       run: dotnet build --no-restore ./src/HelloWorld/HelloWorld.csproj
+  tests:
+    runs-on: ubuntu-latest
+    
+    steps:
     - name: Test
       run: dotnet test --verbosity normal ./src/HelloWorld.Tests/HelloWorld.Tests.csproj
