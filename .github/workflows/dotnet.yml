@@ -23,8 +23,18 @@ jobs:
         dotnet-version: 3.1.x
     - name: Restore dependencies
       run: dotnet restore ./src/HelloWorld/HelloWorld.csproj
+
     - name: Build
-      run: dotnet build --no-restore ./src/HelloWorld/HelloWorld.csproj
+      run: dotnet build --no-restore ./src/HelloWorld/HelloWorld.csproj --configuration Release
+
+    - name: Publish
+      run: dotnet publish -c Release -o ./src/HelloWorld/HelloWorld.csproj
+
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v3
+      with:
+        name: DemoApp
+        path: ${{env.DOTNET_ROOT}}/DemoApp
   tests:
     runs-on: ubuntu-latest
     needs: build
