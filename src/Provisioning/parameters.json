@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "730a05df-0d55-496b-8a6f-d65e0dc4448e"
+        },
+        "name": {
+            "value": "devopsmjtest"
+        },
+        "location": {
+            "value": "West Europe"
+        },
+        "hostingEnvironment": {
+            "value": "Test"
+        },
+        "hostingPlanName": {
+            "value": "DevOpsDemoPlan"
+        },
+        "serverFarmResourceGroup": {
+            "value": "DevOps_Example"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "sku": {
+            "value": "Standard"
+        },
+        "skuCode": {
+            "value": "S1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "currentStack": {
+            "value": "dotnetcore"
+        }
+    }
+}
