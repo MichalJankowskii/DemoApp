@@ -46,3 +46,31 @@ jobs:
         dotnet-version: 3.1.x
     - name: Test
       run: dotnet test --verbosity normal ./src/HelloWorld.Tests/HelloWorld.Tests.csproj
+
+  deploy:
+      runs-on: ubuntu-latest
+      needs: tests
+      environment:
+        name: 'production'
+        url: ${{ steps.deploywebapp.outputs.webapp-url }}
+
+      steps:
+        - name: Download artifact from build job
+          uses: actions/download-artifact@v3
+          with:
+            name: DemoApp
+
+        - name: Login via Azure CLI
+          uses: azure/login@v1
+          with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+        - name: Deploy web app
+          id: deploywebapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: demoAppMJ12345
+            package: DemoApp
+
+        - name: az cli logout
+          run: az logout
