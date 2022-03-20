@@ -5,6 +5,7 @@
 
     public class SumServiceTest
     {
+        [Fact]
         public void Given1and2_WhenRunSum_ThenSumEqual3()
         {
             // Arrange
