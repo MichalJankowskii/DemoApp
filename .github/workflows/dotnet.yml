@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
     paths-ignore:
-      - './src/Provisioning/**'
+      - '/src/Provisioning/**'
   pull_request:
     branches: [ main ]
     paths-ignore:
-      - './src/Provisioning/**'
+      - '/src/Provisioning/**'
 
 jobs:
   build:
